@@ -5,4 +5,6 @@ return {
 		priority = 1000,
 	},
 	{ "blazkowolf/gruber-darker.nvim" },
+	{ "rose-pine/neovim", name = "rose-pine" },
+	{ "NLKNguyen/papercolor-theme", name = "papercolor" },
 }

@@ -13,7 +13,7 @@ keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
 -- open explorer
-vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>ff", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
@@ -22,7 +22,6 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<C-j>", function()
 	vim.diagnostic.goto_next()
 end, opts)
-
 -- better navigation
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
@@ -59,3 +58,9 @@ keymap.set("n", "<leader>wl", "<C-w>l")
 
 -- neogit
 keymap.set("n", "<leader>gg", vim.cmd.Neogit)
+
+-- obsidian
+keymap.set("n", "<leader>ot", "<cmd>ObsidianToday<CR>")
+
+-- shell command
+keymap.set("n", "<leader>e", ":!")
