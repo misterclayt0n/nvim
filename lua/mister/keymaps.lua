@@ -64,3 +64,13 @@ keymap.set("n", "<leader>ot", "<cmd>ObsidianToday<CR>")
 
 -- shell command
 keymap.set("n", "<leader>e", ":!")
+
+-- compile command
+keymap.set("n", "<leader>cc", ":Compile<CR>")
+keymap.set("n", "<leader>cC", ":Recompile<CR>")
+
+-- rezise windows
+keymap.set("n", "<C-Up>", "<C-w>5+")
+keymap.set("n", "<C-Down>", "<C-w>5-")
+keymap.set("n", "<C-Left>", "<C-w>5<")
+keymap.set("n", "<C-Right>", "<C-w>5>")
