@@ -7,4 +7,6 @@ return {
 	{ "blazkowolf/gruber-darker.nvim" },
 	{ "rose-pine/neovim", name = "rose-pine" },
 	{ "NLKNguyen/papercolor-theme", name = "papercolor" },
+	{ "sindresorhus/focus" },
+	{ "AlessandroYorba/Despacio" },
 }

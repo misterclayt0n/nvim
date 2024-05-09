@@ -60,9 +60,6 @@ keymap.set("n", "<leader>wl", "<C-w>l")
 -- neogit
 keymap.set("n", "<leader>gg", vim.cmd.Neogit)
 
--- obsidian
-keymap.set("n", "<leader>ot", "<cmd>ObsidianToday<CR>")
-
 -- shell command
 keymap.set("n", "<leader>e", ":!")
 
