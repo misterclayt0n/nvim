@@ -1,10 +1,10 @@
 return {
-	{
-		"stevearc/oil.nvim",
-		opts = {},
-		-- Optional dependencies
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
+	-- {
+	-- 	"stevearc/oil.nvim",
+	-- 	opts = {},
+	-- 	-- Optional dependencies
+	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
+	-- },
 	{
 		"numToStr/Comment.nvim",
 		config = true,
@@ -64,7 +64,7 @@ return {
 		opts = {
 			-- you can disable colors by uncommenting this line
 			-- no_baleia_support = true,
-			default_command = "npm run build"
-		}
-	}
+			default_command = "npm run build",
+		},
+	},
 }

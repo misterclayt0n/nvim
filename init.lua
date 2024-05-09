@@ -20,7 +20,7 @@ require("lazy").setup({ import = "mister.plugins" })
 
 -- plugins
 require("mister.configs.catppuccin")
-require("mister.configs.oil")
+-- require("mister.configs.oil")
 require("mister.configs.conform")
 
 vim.cmd([[colorscheme gruber-darker]])

@@ -13,7 +13,8 @@ keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
 -- open explorer
-vim.keymap.set("n", "<leader>ff", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- vim.keymap.set("n", "<leader>ff", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
 
 -- select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
