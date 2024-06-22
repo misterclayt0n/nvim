@@ -1,7 +1,8 @@
 print("do not pass unless you're mister clayton")
 
-require("mister.keymaps")
 require("mister.options")
+require("mister.keymaps")
+require("mister.autocmd")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -22,5 +23,6 @@ require("lazy").setup({ import = "mister.plugins" })
 require("mister.configs.catppuccin")
 -- require("mister.configs.oil")
 require("mister.configs.conform")
+require("mister.configs.terminal")
 
-vim.cmd([[colorscheme gruber-darker]])
+vim.cmd([[colorscheme atlas]])

@@ -1,10 +1,17 @@
 return {
-	-- {
-	-- 	"stevearc/oil.nvim",
-	-- 	opts = {},
-	-- 	-- Optional dependencies
-	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	-- },
+	{
+		"stevearc/oil.nvim",
+		opts = {
+			columns = {
+				"icon",
+				"permissions",
+				"size",
+				"mtime",
+			},
+		},
+		-- Optional dependencies
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 	{
 		"numToStr/Comment.nvim",
 		config = true,
@@ -63,18 +70,18 @@ return {
 		end,
 	},
 	{
-		"ej-shafran/compile-mode.nvim",
-		branch = "latest",
-		-- or a specific version:
-		-- tag = "v2.0.0"
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			{ "m00qek/baleia.nvim", tag = "v1.3.0" },
-		},
-		opts = {
-			-- you can disable colors by uncommenting this line
-			-- no_baleia_support = true,
-			default_command = "npm run build",
-		},
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+		-- optionally, override the default options:
+		config = function()
+			require("tailwindcss-colorizer-cmp").setup({
+				color_square_width = 2,
+			})
+		end,
+	},
+	{
+		"NvChad/nvterm",
+		config = function()
+			require("nvterm").setup()
+		end,
 	},
 }

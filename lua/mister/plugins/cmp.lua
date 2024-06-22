@@ -46,18 +46,13 @@ return {
 				{ name = "path" }, -- file system paths
 			}),
 
-			experimental = {
-				ghost_text = {
-					hl_group = "CmpGhostText",
-				},
-			},
-
-			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
+				-- vscode like icons for cmp autocompletion
 				format = lspkind.cmp_format({
 					maxwidth = 50,
 					ellipsis_char = "...",
-					symbol_map = { Copilot = "" },
+					-- prepend tailwindcss-colorizer
+					before = require("tailwindcss-colorizer-cmp").formatter,
 				}),
 			},
 		})
