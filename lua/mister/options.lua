@@ -3,9 +3,9 @@ vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.cursorline = true
 
 vim.opt.smartindent = true
@@ -29,3 +29,6 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" })
 vim.opt.wildignore:append({ "*/node_modules/*" })
+
+vim.opt.undofile = true
+vim.opt.undodir = os.getenv("HOME") .. "/.ignore/nvim/undo"

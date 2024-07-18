@@ -21,8 +21,9 @@ require("lazy").setup({ import = "mister.plugins" })
 
 -- plugins
 require("mister.configs.catppuccin")
+require("mister.configs.lualine")
+require("mister.configs.gruvbox")
 -- require("mister.configs.oil")
 require("mister.configs.conform")
-require("mister.configs.terminal")
 
-vim.cmd([[colorscheme atlas]])
+vim.cmd([[colorscheme gruvbox]])

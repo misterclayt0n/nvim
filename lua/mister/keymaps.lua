@@ -9,8 +9,10 @@ keymap.set("n", "J", "mzJ`z")
 -- moving lines chief
 keymap.set("v", ">", ">gv")
 keymap.set("v", "<", "<gv")
-keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
-keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
+keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv") -- move line up(v)
+keymap.set("v", "<A-Up>", ":m '<-2<CR>gv=gv") -- move line down(v)
+keymap.set("n", "<A-Down>", ":m .+1<CR>==")
+keymap.set("n", "<A-Up>", ":m .-2<CR>==")
 
 -- open explorer
 vim.keymap.set("n", "<leader>ff", "<CMD>Oil<CR>", { desc = "Open parent directory" })
@@ -63,3 +65,17 @@ keymap.set("n", "<C-Right>", "<C-w>5>")
 
 -- conform
 keymap.set("n", "<leader>fm", ":Format<CR>")
+
+-- term stuff
+keymap.set("n", "<A-h>", ":ToggleTerm<CR>")
+keymap.set("v", "<A-h>", ":ToggleTerm<CR>")
+keymap.set('t', '<A-h>', '<C-\\><C-n>:ToggleTerm<CR>', {noremap = true, silent = true})
+function _G.set_terminal_keymaps()
+	local hi = { noremap = true }
+	vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], hi)
+	vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], hi)
+end
+vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()") -- command
+
+-- scratch buffer
+keymap.set("n", "<leader>bs", ":Scratch<CR>")

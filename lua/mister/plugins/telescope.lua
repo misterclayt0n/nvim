@@ -33,5 +33,7 @@ return {
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 		keymap.set("n", "<leader>sp", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+		keymap.set("n", "<leader>,", "<cmd>Telescope buffers<cr>", { desc = "Find buffer" })
+		keymap.set("n", "<leader>ht", "<cmd>Telescope colorscheme<cr>", { desc = "Find buffer" })
 	end,
 }

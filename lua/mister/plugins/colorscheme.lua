@@ -17,5 +17,6 @@ return {
 	{ "huyvohcmc/atlas.vim" },
 	{ "plan9-for-vimspace/acme-colors" },
 	{ "aditya-azad/candle-grey" },
+	{ "sainnhe/gruvbox-material" },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...}
 }

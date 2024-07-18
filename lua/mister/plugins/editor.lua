@@ -78,10 +78,10 @@ return {
 			})
 		end,
 	},
+	{ "akinsho/toggleterm.nvim", version = "*", config = true },
+	{ "szw/vim-maximizer" },
 	{
-		"NvChad/nvterm",
-		config = function()
-			require("nvterm").setup()
-		end,
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 }
