@@ -1,5 +1,3 @@
-print("do not pass unless you're mister clayton")
-
 require("mister.options")
 require("mister.keymaps")
 require("mister.autocmd")
@@ -21,9 +19,8 @@ require("lazy").setup({ import = "mister.plugins" })
 
 -- plugins
 require("mister.configs.catppuccin")
-require("mister.configs.lualine")
 require("mister.configs.gruvbox")
 -- require("mister.configs.oil")
 require("mister.configs.conform")
 
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme poimandres]])

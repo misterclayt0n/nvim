@@ -49,7 +49,7 @@ return {
 			formatting = {
 				-- vscode like icons for cmp autocompletion
 				format = lspkind.cmp_format({
-					maxwidth = 50,
+					maxwidth = 20,
 					ellipsis_char = "...",
 					-- prepend tailwindcss-colorizer
 					before = require("tailwindcss-colorizer-cmp").formatter,

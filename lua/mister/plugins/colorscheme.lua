@@ -1,15 +1,6 @@
-function ColorMyGruber()
-    vim.opt.background = "dark"
-    vim.opt.termguicolors = true
-    vim.cmd.colorscheme("gruber-darker")
-
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
 return {
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "blazkowolf/gruber-darker.nvim", config = ColorMyGruber },
+	{ "blazkowolf/gruber-darker.nvim" },
 	{ "rose-pine/neovim", name = "rose-pine" },
 	{ "NLKNguyen/papercolor-theme", name = "papercolor" },
 	{ "sindresorhus/focus" },
@@ -18,5 +9,7 @@ return {
 	{ "plan9-for-vimspace/acme-colors" },
 	{ "aditya-azad/candle-grey" },
 	{ "sainnhe/gruvbox-material" },
-	{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...}
+	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
+	{ "kdheepak/monochrome.nvim" },
+	{ "olivercederborg/poimandres.nvim" },
 }

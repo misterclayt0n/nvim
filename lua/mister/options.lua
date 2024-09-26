@@ -1,4 +1,4 @@
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -6,7 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.cursorline = true
+-- vim.opt.cursorline = true
 
 vim.opt.smartindent = true
 
@@ -32,3 +32,7 @@ vim.opt.wildignore:append({ "*/node_modules/*" })
 
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.ignore/nvim/undo"
+
+vim.cmd("command! W w")
+vim.cmd("command! Wq wq")
+vim.cmd("command! Q q")

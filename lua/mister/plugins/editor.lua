@@ -8,6 +8,9 @@ return {
 				"size",
 				"mtime",
 			},
+			view_options = {
+				show_hidden = true,
+			},
 		},
 		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -48,9 +51,9 @@ return {
 	{
 		"JoosepAlviste/nvim-ts-context-commentstring",
 	},
-	{
-		"github/copilot.vim",
-	},
+	-- {
+	-- 	"github/copilot.vim",
+	-- },
 	{
 		{
 			"gbprod/yanky.nvim",
@@ -81,7 +84,17 @@ return {
 	{ "akinsho/toggleterm.nvim", version = "*", config = true },
 	{ "szw/vim-maximizer" },
 	{
-		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		"ej-shafran/compile-mode.nvim",
+		tag = "v5.*",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		  config = function()
+    ---@type CompileModeOpts
+    vim.g.compile_mode = {
+        -- to add ANSI escape code support, add:
+        -- baleia_setup = true,
+    }
+		end
 	},
 }

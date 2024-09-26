@@ -42,14 +42,14 @@ keymap.set("v", "<leader>p", '"_dP')
 keymap.set("v", "<leader>y", '"+y')
 
 -- buffer navigation
-keymap.set("n", "<leader>bp", vim.cmd.bprevious)
-keymap.set("n", "<leader>bn", vim.cmd.bnext)
-keymap.set("n", "<leader>bd", vim.cmd.bdelete)
+keymap.set("n", "<C-w>p", vim.cmd.bprevious)
+keymap.set("n", "<C-w>n", vim.cmd.bnext)
+keymap.set("n", "<C-w>d", vim.cmd.bdelete)
 
 -- windows
-keymap.set("n", "<leader>w|", vim.cmd.vsplit)
-keymap.set("n", "<leader>w-", vim.cmd.split)
-keymap.set("n", "<leader>wd", vim.cmd.close)
+keymap.set("n", "<C-w>|", vim.cmd.vsplit)
+keymap.set("n", "<C-w>-", vim.cmd.split)
+keymap.set("n", "<C-w>w", vim.cmd.close)
 
 -- neogit
 keymap.set("n", "<leader>gg", vim.cmd.Neogit)
@@ -67,9 +67,9 @@ keymap.set("n", "<C-Right>", "<C-w>5>")
 keymap.set("n", "<leader>fm", ":Format<CR>")
 
 -- term stuff
-keymap.set("n", "<A-h>", ":ToggleTerm<CR>")
-keymap.set("v", "<A-h>", ":ToggleTerm<CR>")
-keymap.set('t', '<A-h>', '<C-\\><C-n>:ToggleTerm<CR>', {noremap = true, silent = true})
+keymap.set("n", "<A-j>", ":ToggleTerm<CR>")
+keymap.set("v", "<A-j>", ":ToggleTerm<CR>")
+keymap.set('t', '<A-j>', '<C-\\><C-n>:ToggleTerm<CR>', {noremap = true, silent = true})
 function _G.set_terminal_keymaps()
 	local hi = { noremap = true }
 	vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], hi)
