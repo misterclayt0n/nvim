@@ -15,6 +15,8 @@ return {
 		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
+	{ "romainl/vim-cool" },
+	{ "tpope/vim-surround" },
 	{
 		"numToStr/Comment.nvim",
 		config = true,
@@ -28,12 +30,6 @@ return {
 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 			"MunifTanjim/nui.nvim",
 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-		},
-	},
-	{
-		"szw/vim-maximizer",
-		keys = {
-			{ "<leader>wo", "<cmd>MaximizerToggle<CR>" },
 		},
 	},
 	{
@@ -51,9 +47,6 @@ return {
 	{
 		"JoosepAlviste/nvim-ts-context-commentstring",
 	},
-	-- {
-	-- 	"github/copilot.vim",
-	-- },
 	{
 		{
 			"gbprod/yanky.nvim",
@@ -65,14 +58,6 @@ return {
 		},
 	},
 	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		ft = { "markdown" },
-		build = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	},
-	{
 		"roobert/tailwindcss-colorizer-cmp.nvim",
 		-- optionally, override the default options:
 		config = function()
@@ -80,21 +65,5 @@ return {
 				color_square_width = 2,
 			})
 		end,
-	},
-	{ "akinsho/toggleterm.nvim", version = "*", config = true },
-	{ "szw/vim-maximizer" },
-	{
-		"ej-shafran/compile-mode.nvim",
-		tag = "v5.*",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		  config = function()
-    ---@type CompileModeOpts
-    vim.g.compile_mode = {
-        -- to add ANSI escape code support, add:
-        -- baleia_setup = true,
-    }
-		end
 	},
 }

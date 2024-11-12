@@ -23,4 +23,4 @@ require("mister.configs.gruvbox")
 -- require("mister.configs.oil")
 require("mister.configs.conform")
 
-vim.cmd([[colorscheme poimandres]])
+vim.cmd([[colorscheme gruber-darker]])
